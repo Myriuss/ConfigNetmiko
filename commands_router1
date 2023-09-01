@@ -1,0 +1,42 @@
+interface FastEthernet0/0
+ ip address 192.168.5.1 255.255.255.0
+ duplex half
+
+interface FastEthernet0/0.7
+ encapsulation dot1Q 7
+ ip address 192.168.77.100 255.255.255.0
+
+interface FastEthernet0/0.8
+ encapsulation dot1Q 8
+ ip address 192.168.88.100 255.255.255.0
+
+interface FastEthernet1/0
+ ip address 192.168.111.1 255.255.255.0
+ duplex half
+
+interface FastEthernet2/0
+ no ip address
+ shutdown
+ duplex full
+
+interface FastEthernet3/0
+ no ip address
+ shutdown
+ duplex full
+
+interface FastEthernet4/0
+ ip address 192.168.4.2 255.255.255.0
+ duplex full
+
+ip route 192.168.22.0 255.255.255.0 192.168.4.1
+ip route 192.168.22.0 255.255.255.0 192.168.111.3
+ip route 192.168.33.0 255.255.255.0 192.168.4.1
+ip route 192.168.33.0 255.255.255.0 192.168.111.3
+ip route 192.168.44.0 255.255.255.0 192.168.4.1
+ip route 192.168.44.0 255.255.255.0 192.168.111.3
+ip route 192.168.55.0 255.255.255.0 192.168.7.0
+ip route 192.168.55.0 255.255.255.0 192.168.111.2
+ip route 192.168.66.0 255.255.255.0 192.168.7.0
+ip route 192.168.66.0 255.255.255.0 192.168.111.2
+ip route 192.168.122.0 255.255.255.0 192.168.4.1
+ip route 192.168.129.0 255.255.255.0 192.168.111.3

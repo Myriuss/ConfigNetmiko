@@ -1,0 +1,31 @@
+
+interface Ethernet0/0
+ description LINK-TO-ROUTER5
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+ duplex auto
+
+interface Ethernet0/1
+ switchport access vlan 5
+ switchport mode access
+ duplex auto
+
+interface Ethernet0/2
+ switchport access vlan 5
+ switchport mode access
+ duplex auto
+
+interface Ethernet0/3
+ switchport access vlan 6
+ switchport mode access
+ duplex auto
+
+interface Ethernet1/0
+ switchport access vlan 6
+ switchport mode access
+ duplex auto
+
+exit
+
+ip route 192.168.1.1 255.255.255.255 192.168.2.1
+ip route 192.168.129.0 255.255.255.0 192.168.2.1
