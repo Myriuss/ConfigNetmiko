@@ -53,16 +53,9 @@ r1 = {
     'device_type': 'cisco_ios',
     'ip': '192.168.111.1',
     'username': 'r1',
-    'password': 'password',
+    'password': 'passwo rd',
 }
 
-#fa1/0.1
-r4 = {
-    'device_type': 'cisco_ios',
-    'ip': '192.168.123.100',
-    'username': 'r4',
-    'password': 'password',
-}
 
 #with open('commands_file_switch') as f:
 #    lines = f.read().splitlines()
@@ -85,8 +78,9 @@ for n, devices in enumerate(all_devices, start=1):
 #print (lines)
 
 #la config du routeur5 est : commands_router4
+#config router4: commands_router5
 
-all_devices = [r1, r2, r3, r5, r4]
+all_devices = [r1, r2, r3, r5]
 
 for n, devices in enumerate(all_devices, start=1):
     with open('commands_router'+str(n)) as f:

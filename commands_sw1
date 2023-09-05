@@ -31,3 +31,5 @@ description LINK-TO-SWITCH1
 switchport trunk encapsulation dot1q
 switchport mode trunk
 duplex auto
+
+ip route 192.168.111.0 255.255.255.0 192.168.129.22
