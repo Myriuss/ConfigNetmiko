@@ -18,17 +18,9 @@ interface FastEthernet2/0.6
  encapsulation dot1Q 6
  ip address 192.168.66.100 255.255.255.0
 
-interface FastEthernet3/0
- no ip address
- shutdown
- duplex full
-
-interface FastEthernet4/0
- no ip address
- shutdown
- duplex full
 
 no ip http secure-server
+ip route 0.0.0.0 0.0.0.0 192.168.111.200
 ip route 192.168.22.0 255.255.255.0 192.168.1.1
 ip route 192.168.22.0 255.255.255.0 192.168.111.3
 ip route 192.168.33.0 255.255.255.0 192.168.1.1
